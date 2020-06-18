@@ -14,5 +14,5 @@ public interface ProjectService {
 
     List<ProjectDto> getProjectsByCustomer(Long customerId);
 
-    List<ProjectDto> getProjectsByDeveloper(String developerId);
+    List<ProjectDto> getProjectsByDeveloper(String developerId,String idType);
 }

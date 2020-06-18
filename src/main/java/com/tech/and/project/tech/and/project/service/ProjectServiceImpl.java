@@ -37,8 +37,8 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public List<ProjectDto> getProjectsByDeveloper(String developerId) {
-        Developer developer = developerService.findDeveloperById(developerId);
+    public List<ProjectDto> getProjectsByDeveloper(String developerId,String idType) {
+        Developer developer = developerService.getDeveloper(developerId,idType);
         return mapper.buildListProject(projectRepository.findByDeveloper(developer));
     }
 }

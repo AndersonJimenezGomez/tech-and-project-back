@@ -21,4 +21,9 @@ public class ProjectController {
         return projectService.getProjectsByCustomer(customerId);
     }
 
+    @GetMapping("/developer")
+    public List<ProjectDto> getProjectByDeveloper(@RequestParam("developerId")String developerId,@RequestParam("idType")String idType){
+        return projectService.getProjectsByDeveloper(developerId,idType);
+    }
+
 }
