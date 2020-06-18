@@ -16,7 +16,6 @@ import javax.persistence.*;
 public class Project {
 
     @Id
-    @Column(name="id_project")
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long idProject;
 
@@ -32,6 +31,9 @@ public class Project {
             @JoinColumn(name="customer_id_fk", referencedColumnName="customer_id")
     })
     private Customer customer;
+
+    @Column(name="project_description")
+    private String projectDescription;
 
 
 }

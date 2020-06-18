@@ -20,7 +20,7 @@ public class DeveloperPK implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Column(name = "developer_id")
-    private String customerId;
+    private String developerId;
 
     @Column(name="id_type")
     private String idType;
