@@ -23,6 +23,8 @@ dependencies {
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
+	compile group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.4.17.Final'
+	compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '4.1.7.Final'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'

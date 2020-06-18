@@ -4,7 +4,7 @@ package com.tech.and.project.tech.and.project.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
+
 
 import javax.persistence.*;
 
@@ -22,7 +22,8 @@ public class Project {
 
     @ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
     @JoinColumns({
-            @JoinColumn(name="developer_id_fk", referencedColumnName="developer_id")
+            @JoinColumn(name="developer_id_fk", referencedColumnName="developer_id"),
+            @JoinColumn(name="developer_id_type", referencedColumnName="id_type")
     })
     private Developer developer;
 
